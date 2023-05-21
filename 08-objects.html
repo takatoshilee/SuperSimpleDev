@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        const product = {
+            name: 'socks',
+            price: 1090
+        };
+        console.log(product);
+        console.log(product.name);
+        product.name = 'content sucks'
+        console.log(product.name)
+        */
+        /*
+        const product2 = {
+            name: 'shirt',
+            ['delivery-time']: '1 day', 
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1() {
+                console.log('function inside object');
+            }
+        };
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+
+        console.log(product2.rating.count);
+        product2.fun();
+
+        console.log(typeof console.log);
+
+        console.log(JSON.stringify(product2));
+        console.log(JSON.parse(JSON.stringify(product2)));
+        */
+
+        console.log('hello'.length);
+
+        const object4 = {
+            message: 'Good job!',
+            price: 799
+        };
+
+        // const message = object4.message;
+        const { message, price } = object4;
+        console.log(message);
+        console.log(price);
+
+        const object5 = {
+            // message: message
+            message,
+            /*method: function function1() {
+                console.log('method');
+            }*/
+            method() {
+                console.log('method')
+            }
+        };
+        console.log(object5);
+        object5.method();
+
+
+
+        //8a
+        const products = {
+            name: 'testing',
+            price: 2000
+        };
+
+        const product2 = {
+            name: 'testing',
+            price: 2000
+        };
+        console.log(products.name);
+        console.log(products.price);
+        products.price += 500;
+        console.log(products.price);
+        console.log(products['delivery-time']);
+        console.log(comparePrice(products, product2));
+        console.log(isSameProduct(products, product2));
+
+
+        function comparePrice(product1, product2) {
+            if (product1.price < product2.price) {
+                return product1;
+            } else {
+                return product2;
+            }
+        }
+
+        function isSameProduct(product1, product2) {
+            if (product1.name === product2.name && product1.price === product2.price) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let text = 'Good Morning';
+        let lowerText = text.toLowerCase();
+        console.log(lowerText);
+        console.log((text + " ").repeat(2));
+
+    </script>
+</body>
+
+</html>
